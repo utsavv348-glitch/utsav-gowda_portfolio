@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Utsav, Software Engineer. Engineered with precision for high-performance cloud architectures, scalable web applications, and intuitive digital experiences.">
+    <meta name="author" content="Utsav">
+    <title>Utsav — Software Engineer (Apple Edition)</title>
+
+    <!-- Google Fonts: Pixel Art & Clean Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Accessible Skip to Main Content Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ==========================================================================
+         MOBILE TOP HEADER (Responsive screen < 1024px)
+         ========================================================================== -->
+    <header id="mobile-top-bar" class="pixel-mobile-header">
+        <button 
+            id="mobile-nav-toggle" 
+            class="pixel-mobile-toggle" 
+            type="button" 
+            aria-expanded="false" 
+            aria-controls="left-navbar" 
+            aria-label="Open Navigation Menu"
+        >
+            <span class="toggle-icon-bars" aria-hidden="true">&#9776;</span>
+            <span class="toggle-btn-label">MENU</span>
+        </button>
+
+        <a href="#hero" class="pixel-mobile-brand" aria-label="Utsav Developer Homepage">
+            <span class="mobile-brand-icon" aria-hidden="true">&#9658;</span>
+            <span class="mobile-brand-text">UTSAV.SYS</span>
+        </a>
+
+        <button 
+            id="mobile-theme-toggle" 
+            class="pixel-mobile-theme-btn" 
+            type="button" 
+            aria-label="Toggle Night Mode"
+            title="Toggle Theme"
+        >
+            <span id="mobile-theme-icon" aria-hidden="true">&#9788;</span>
+        </button>
+    </header>
+
+    <!-- Backdrop overlay for mobile drawer -->
+    <div id="nav-backdrop" class="pixel-nav-backdrop" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         VERTICAL NAVIGATION BAR (LEFT SIDE OF SCREEN - PIXEL ART STYLE)
+         ========================================================================== -->
+    <nav id="left-navbar" class="pixel-vertical-nav" aria-label="Main Vertical Navigation">
+        <!-- Arcade Brand Header -->
+        <div class="pixel-nav-header">
+            <div class="pixel-nav-header-row">
+                <a href="#hero" class="pixel-brand-link" aria-label="Home">
+                    <span class="pixel-led-dot" aria-hidden="true"></span>
+                    <span class="pixel-brand-title">UTSAV.SYS</span>
+                </a>
+                <button id="mobile-nav-close" class="pixel-nav-close-btn" type="button" aria-label="Close Navigation Menu">&times;</button>
+            </div>
+            <div class="pixel-nav-lvl-badge">
+                <span class="lvl-label">LVL 99 DEV</span>
+            </div>
+        </div>
+
+        <!-- Vertical Links List -->
+        <ul class="pixel-nav-menu">
+            <li class="nav-item">
+                <a href="#hero" class="pixel-nav-link active" data-section="hero">
+                    <span class="pixel-cursor-indicator" aria-hidden="true">&#9658;</span>
+                    <span class="nav-icon" aria-hidden="true">&#127968;</span>
+                    <span class="nav-label">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="pixel-nav-link" data-section="about">
+                    <span class="pixel-cursor-indicator" aria-hidden="true">&#9658;</span>
+                    <span class="nav-icon" aria-hidden="true">&#128100;</span>
+                    <span class="nav-label">About Me</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills" class="pixel-nav-link" data-section="skills">
+                    <span class="pixel-cursor-indicator" aria-hidden="true">&#9658;</span>
+                    <span class="nav-icon" aria-hidden="true">&#9876;</span>
+                    <span class="nav-label">Skills</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#timeline" class="pixel-nav-link" data-section="timeline">
+                    <span class="pixel-cursor-indicator" aria-hidden="true">&#9658;</span>
+                    <span class="nav-icon" aria-hidden="true">&#128220;</span>
+                    <span class="nav-label">Timeline</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#projects" class="pixel-nav-link" data-section="projects">
+                    <span class="pixel-cursor-indicator" aria-hidden="true">&#9658;</span>
+                    <span class="nav-icon" aria-hidden="true">&#127918;</span>
+                    <span class="nav-label">Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#testimonials" class="pixel-nav-link" data-section="testimonials">
+                    <span class="pixel-cursor-indicator" aria-hidden="true">&#9658;</span>
+                    <span class="nav-icon" aria-hidden="true">&#9733;</span>
+                    <span class="nav-label">Testimonials</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#chat" class="pixel-nav-link" data-section="chat">
+                    <span class="pixel-cursor-indicator" aria-hidden="true">&#9658;</span>
+                    <span class="nav-icon" aria-hidden="true">&#128172;</span>
+                    <span class="nav-label">Chat</span>
+                    <span class="pixel-badge-new">AI</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="pixel-nav-link" data-section="contact">
+                    <span class="pixel-cursor-indicator" aria-hidden="true">&#9658;</span>
+                    <span class="nav-icon" aria-hidden="true">&#9993;</span>
+                    <span class="nav-label">Contact</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Bottom Controller & System Status HUD -->
+        <div class="pixel-nav-footer">
+            <!-- Theme Toggle Button -->
+            <button 
+                id="theme-toggle" 
+                class="pixel-nav-theme-btn" 
+                type="button" 
+                aria-label="Toggle Night Mode"
+                title="Toggle Theme"
+            >
+                <span class="theme-knob-box" aria-hidden="true">
+                    <span class="ios-switch-thumb" style="display:none;"></span>
+                </span>
+                <span id="theme-label-apple" class="pixel-theme-text">THEME [DAY]</span>
+            </button>
+
+            <!-- 8-Bit HP Status Card -->
+            <div class="pixel-system-hud">
+                <div class="hud-hp-row">
+                    <span class="hud-hp-tag">HP</span>
+                    <div class="hud-bar-container">
+                        <div class="hud-bar-fill"></div>
+                    </div>
+                </div>
+                <div class="hud-status-line">
+                    <span class="hud-pulse-dot" aria-hidden="true"></span>
+                    <span>ONLINE // READY</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================================================
+         MAIN CONTENT AREA
+         ========================================================================== -->
+    <main id="main-content">
+
+        <!-- ======================================================================
+             SECTION: HERO (APPLE KEYNOTE SHOWCASE)
+             ====================================================================== -->
+        <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+            <!-- Three.js Interactive 3D Holographic Canvas -->
+            <canvas id="hero-3d-canvas" class="hero-3d-canvas" aria-hidden="true"></canvas>
+
+            <!-- Ambient Apple Glow -->
+            <div class="hero-ambient-glow" aria-hidden="true"></div>
+
+            <div class="container hero-content">
+                
+                <!-- Left Column: Keynote Typography & Actions -->
+                <div class="hero-info-column">
+                    <!-- Eyebrow Chip & 3D Interactive Badge -->
+                    <div class="hero-eyebrow-row">
+                        <div class="hero-eyebrow-pill">
+                            <span class="eyebrow-dot"></span>
+                            <span>Software Engineer Pro</span>
+                        </div>
+                        <div class="hero-3d-hint">
+                            <span class="hint-3d-icon">&#10070;</span>
+                            <span>3D Interactive</span>
+                        </div>
+                    </div>
+
+                    <!-- Apple Cinematic Headline -->
+                    <div class="hero-title-group">
+                        <span class="hero-super-title">Introducing Utsav</span>
+                        <h1 id="hero-heading" class="hero-title">
+                            Engineered for the extraordinary.
+                        </h1>
+                    </div>
+
+                    <!-- Tagline -->
+                    <p class="hero-tagline">
+                        Architecting high-throughput cloud backends and fluid, accessible user interfaces with obsession over every single detail.
+                    </p>
+
+                    <!-- Interactive 3D Holographic Status HUD -->
+                    <div class="hero-3d-status-hud" id="hero-3d-hud">
+                        <div class="hud-3d-info">
+                            <span class="hud-3d-pulse-orb" aria-hidden="true"></span>
+                            <span class="hud-3d-title">WebGL 3D Holographic Engine</span>
+                        </div>
+                        <div class="hud-3d-actions">
+                            <button type="button" class="chip-3d-action" id="btn-3d-toggle-spin" aria-label="Toggle 3D Orbit Speed">
+                                <span class="action-icon">&#10227;</span>
+                                <span id="spin-btn-label">Orbit: Active</span>
+                            </button>
+                            <button type="button" class="chip-3d-action" id="btn-3d-toggle-mode" aria-label="Cycle 3D Shader Mode">
+                                <span class="action-icon">&#9670;</span>
+                                <span id="mode-btn-label">Mode: Hologram</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Apple Pill Buttons -->
+                    <div class="hero-actions">
+                        <a href="#projects" class="apple-btn apple-btn-primary">
+                            Explore Work &rsaquo;
+                        </a>
+                        <a href="#contact" class="apple-btn apple-btn-secondary">
+                            Get in Touch &rsaquo;
+                        </a>
+                        <a href="#about" class="apple-btn apple-btn-link">
+                            Learn more &rsaquo;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Studio Portrait Hardware Showcase with 3D Satellite Chips -->
+                <div class="hero-visual-column">
+                    <article class="apple-device-frame" id="hero-portrait-frame">
+                        <!-- Ambient Dynamic Glow Aura behind device -->
+                        <div class="apple-frame-aura" aria-hidden="true"></div>
+
+                        <!-- 3D Satellite Glass Chips orbiting in Z-space -->
+                        <div class="apple-satellite-chip chip-top-left" aria-hidden="true">
+                            <span class="chip-icon">&#9729;</span>
+                            <span>Cloud Native</span>
+                        </div>
+
+                        <div class="apple-satellite-chip chip-top-right" aria-hidden="true">
+                            <span class="chip-icon">&#9889;</span>
+                            <span>Zero Latency</span>
+                        </div>
+
+                        <div class="apple-satellite-chip chip-bottom-right" aria-hidden="true">
+                            <span class="chip-icon">&#63743;</span>
+                            <span>Pro Core</span>
+                        </div>
+
+                        <div class="apple-satellite-chip chip-bottom-left" aria-hidden="true">
+                            <span class="chip-icon">&#10022;</span>
+                            <span>WebGL 3D</span>
+                        </div>
+
+                        <div class="apple-screen-canvas">
+                            <!-- Dynamic Island Status Indicator -->
+                            <div class="apple-dynamic-island">
+                                <span class="island-camera-dot"></span>
+                                <span>Active &bull; Available</span>
+                            </div>
+
+                            <!-- Portrait Image with Studio Lighting -->
+                            <img 
+                                src="WhatsApp Image 2026-10-07 at 9.25.44 AM.jpeg" 
+                                alt="Studio portrait of Utsav, Software Engineer" 
+                                class="apple-portrait-img"
+                                width="420"
+                                height="510"
+                            >
+
+                            <!-- Gradient Lighting Vignette -->
+                            <div class="apple-screen-lighting"></div>
+
+                            <!-- Interactive Specular Glare / Holographic Light Sheen -->
+                            <div class="apple-specular-glare" aria-hidden="true"></div>
+
+                            <!-- Floating Bottom Glass Tag -->
+                            <div class="apple-screen-caption">
+                                <div class="caption-meta">
+                                    <span class="caption-title">Utsav</span>
+                                    <span class="caption-sub">Full-Stack &amp; Cloud Systems</span>
+                                </div>
+                                <span class="caption-badge">Verified Pro</span>
+                            </div>
+                        </div>
+
+                        <!-- Hardware Chassis Footer Details -->
+                        <footer class="device-footer-details">
+                            <span>Designed for Impact</span>
+                            <span>Precision Code</span>
+                        </footer>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECTION: ABOUT ME (BENTO CARD STYLE)
+             ====================================================================== -->
+        <section id="about" class="section about-section" aria-labelledby="about-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Philosophy</p>
+                    <h2 id="about-heading" class="section-title">Designed with purpose.<br>Built to perform.</h2>
+                    <p class="section-subtitle">
+                        Every system is crafted from first principles, blending elegant technical architecture with intuitive digital experiences.
+                    </p>
+                </header>
+
+                <div class="about-card">
+                    <div class="about-avatar-wrapper">
+                        <img src="WhatsApp Image 2026-10-07 at 9.25.44 AM.jpeg" alt="Portrait photo of Utsav" width="240" height="280" loading="lazy">
+                    </div>
+                    <div class="about-copy">
+                        <p>
+                            As a software engineer, I believe great software should feel as effortless as it is powerful. I specialize in building distributed backend services, responsive web applications, and developer-centric tooling.
+                        </p>
+                        <p>
+                            My approach focuses on <strong>resilience, speed, and clean code ergonomics</strong> — ensuring systems scale effortlessly under heavy loads while maintaining exceptional developer velocity and user satisfaction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECTION: SKILLS & CAPABILITIES (BENTO GRID)
+             ====================================================================== -->
+        <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Capabilities</p>
+                    <h2 id="skills-heading" class="section-title">A powerhouse tech stack.</h2>
+                    <p class="section-subtitle">
+                        Engineered with industry-leading frameworks, languages, and cloud infrastructure.
+                    </p>
+                </header>
+                
+                <div class="skills-grid">
+                    <!-- Frontend -->
+                    <article class="skills-bento-card">
+                        <span class="skills-card-icon">&#9672;</span>
+                        <h3 class="skills-card-title">Frontend Experience</h3>
+                        <ul class="skills-pill-tags">
+                            <li>TypeScript</li>
+                            <li>React</li>
+                            <li>Next.js</li>
+                            <li>Modern CSS</li>
+                            <li>Semantic HTML5</li>
+                            <li>Web Accessibility</li>
+                        </ul>
+                    </article>
+
+                    <!-- Backend -->
+                    <article class="skills-bento-card">
+                        <span class="skills-card-icon">&#9670;</span>
+                        <h3 class="skills-card-title">Backend Architecture</h3>
+                        <ul class="skills-pill-tags">
+                            <li>Node.js / Express</li>
+                            <li>Python / FastAPI</li>
+                            <li>Go</li>
+                            <li>REST &amp; GraphQL</li>
+                            <li>Microservices</li>
+                            <li>gRPC</li>
+                        </ul>
+                    </article>
+
+                    <!-- Cloud & Data -->
+                    <article class="skills-bento-card">
+                        <span class="skills-card-icon">&#9671;</span>
+                        <h3 class="skills-card-title">Cloud &amp; DevOps</h3>
+                        <ul class="skills-pill-tags">
+                            <li>Docker &amp; Containers</li>
+                            <li>AWS / Cloud Native</li>
+                            <li>PostgreSQL</li>
+                            <li>Redis</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Kubernetes</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECTION: TIMELINE (EXPERIENCE & EDUCATION)
+             ====================================================================== -->
+        <section id="timeline" class="section timeline-section" aria-labelledby="timeline-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Career Milestone</p>
+                    <h2 id="timeline-heading" class="section-title">A track record of excellence.</h2>
+                </header>
+                
+                <ol class="timeline-stepper">
+                    <li class="timeline-step">
+                        <header class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Senior Software Engineer</h3>
+                                <span class="timeline-company">Tech Solutions Inc.</span>
+                            </div>
+                            <time class="timeline-time" datetime="2023-01">2023 &ndash; Present</time>
+                        </header>
+                        <p class="timeline-desc">
+                            Spearheaded high-concurrency microservices refactoring, optimizing latency by 35% and enhancing enterprise infrastructure resilience.
+                        </p>
+                    </li>
+
+                    <li class="timeline-step">
+                        <header class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Software Developer</h3>
+                                <span class="timeline-company">Innovative Apps Co.</span>
+                            </div>
+                            <time class="timeline-time" datetime="2021-06">2021 &ndash; 2023</time>
+                        </header>
+                        <p class="timeline-desc">
+                            Designed fluid user interfaces and integrated resilient backend REST APIs maintaining 99.9% uptime across production clusters.
+                        </p>
+                    </li>
+
+                    <li class="timeline-step">
+                        <header class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">B.S. in Computer Science</h3>
+                                <span class="timeline-company">University of Technology</span>
+                            </div>
+                            <time class="timeline-time" datetime="2017-09">2017 &ndash; 2021</time>
+                        </header>
+                        <p class="timeline-desc">
+                            Graduated with honors. Deep concentration in Algorithms, Distributed Systems, and Database Architectures.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECTION: FEATURED WORK
+             ====================================================================== -->
+        <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Featured Work</p>
+                    <h2 id="projects-heading" class="section-title">Crafted with precision.</h2>
+                    <p class="section-subtitle">A curated selection of production applications and developer platforms.</p>
+                </header>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-apple-card">
+                        <div>
+                            <span class="project-badge-type">Cloud Analytics</span>
+                            <h3 class="project-title">Real-Time Metrics Engine</h3>
+                            <p class="project-description">
+                                A high-throughput telemetry dashboard ingesting 100k+ events/sec with automated predictive alerts.
+                            </p>
+                            <ul class="project-tech-pills">
+                                <li>TypeScript</li>
+                                <li>React</li>
+                                <li>Node.js</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                        </div>
+                        <footer class="project-actions">
+                            <a href="#" class="project-action-link" target="_blank" rel="noopener noreferrer">Live Demo &rsaquo;</a>
+                            <a href="#" class="project-action-link" target="_blank" rel="noopener noreferrer">View Code &rsaquo;</a>
+                        </footer>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-apple-card">
+                        <div>
+                            <span class="project-badge-type">Distributed Architecture</span>
+                            <h3 class="project-title">E-Commerce Engine</h3>
+                            <p class="project-description">
+                                High-performance checkout and inventory management platform architected for seamless multi-region failover.
+                            </p>
+                            <ul class="project-tech-pills">
+                                <li>Python</li>
+                                <li>FastAPI</li>
+                                <li>Docker</li>
+                                <li>Redis</li>
+                            </ul>
+                        </div>
+                        <footer class="project-actions">
+                            <a href="#" class="project-action-link" target="_blank" rel="noopener noreferrer">Live Demo &rsaquo;</a>
+                            <a href="#" class="project-action-link" target="_blank" rel="noopener noreferrer">View Code &rsaquo;</a>
+                        </footer>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-apple-card">
+                        <div>
+                            <span class="project-badge-type">Developer Tools</span>
+                            <h3 class="project-title">DevOps Orchestrator CLI</h3>
+                            <p class="project-description">
+                                Open-source command-line tool standardizing infrastructure boilerplate and CI/CD automation across teams.
+                            </p>
+                            <ul class="project-tech-pills">
+                                <li>Go</li>
+                                <li>CLI</li>
+                                <li>GitHub Actions</li>
+                            </ul>
+                        </div>
+                        <footer class="project-actions">
+                            <a href="#" class="project-action-link" target="_blank" rel="noopener noreferrer">Live Demo &rsaquo;</a>
+                            <a href="#" class="project-action-link" target="_blank" rel="noopener noreferrer">View Code &rsaquo;</a>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECTION: TESTIMONIALS (PLAYER REVIEWS & ENDORSEMENTS)
+             ====================================================================== -->
+        <section id="testimonials" class="section testimonials-section" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">&#9733; Quest Endorsements</p>
+                    <h2 id="testimonials-heading" class="section-title">What team leads &amp; clients say.</h2>
+                    <p class="section-subtitle">Real feedback from engineering peers, managers, and collaborators.</p>
+                </header>
+
+                <div class="testimonials-grid">
+                    <!-- Review 1 -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote class="testimonial-quote">
+                            "Utsav transformed our core backend services. He re-architected our high-concurrency microservices with precision, cutting our API latency in half while ensuring zero downtime."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-avatar">&#128187;</span>
+                            <div class="author-meta">
+                                <span class="author-name">Alex Rivera</span>
+                                <span class="author-role">VP of Engineering, CloudScale</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Review 2 -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote class="testimonial-quote">
+                            "An extraordinary engineer with deep attention to detail. Whether designing complex distributed systems or fluid responsive frontends, his code is pristine and robust."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-avatar">&#9881;</span>
+                            <div class="author-meta">
+                                <span class="author-name">Sophia Chen</span>
+                                <span class="author-role">Staff System Architect, Fintech Global</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Review 3 -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote class="testimonial-quote">
+                            "Working with Utsav was seamless. He not only met every technical requirement ahead of schedule but also elevated the entire engineering workflow with modern CI/CD tooling."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-avatar">&#128640;</span>
+                            <div class="author-meta">
+                                <span class="author-name">Marcus Vance</span>
+                                <span class="author-role">Head of Product, Nexus Apps</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECTION: CHAT (INTERACTIVE PIXEL TERMINAL // AI NPC MESSENGER)
+             ====================================================================== -->
+        <section id="chat" class="section chat-section" aria-labelledby="chat-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">&#128172; Live Terminal</p>
+                    <h2 id="chat-heading" class="section-title">Direct Chat Terminal.</h2>
+                    <p class="section-subtitle">Send a quick ping, ask about architecture availability, or say hello.</p>
+                </header>
+
+                <div class="pixel-chat-window">
+                    <!-- Terminal Top Bar -->
+                    <div class="chat-terminal-bar">
+                        <div class="chat-terminal-dots">
+                            <span class="term-dot red"></span>
+                            <span class="term-dot yellow"></span>
+                            <span class="term-dot green"></span>
+                        </div>
+                        <span class="chat-terminal-title">UTSAV_TERMINAL_V2.EXE &bull; LIVE</span>
+                        <span class="chat-terminal-status">[CONNECTED]</span>
+                    </div>
+
+                    <!-- Chat Message Area -->
+                    <div class="chat-messages-container" id="chat-messages">
+                        <div class="chat-bubble bot-bubble">
+                            <span class="bubble-sender">&#9658; UTSAV_BOT:</span>
+                            <p>Hello! Welcome to the system terminal. How can I assist you with your engineering quest today?</p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Prompt Chips -->
+                    <div class="chat-prompt-chips">
+                        <button type="button" class="prompt-chip" data-msg="👋 Just wanted to say hello!">👋 Say Hello</button>
+                        <button type="button" class="prompt-chip" data-msg="💼 Are you available for software engineering roles?">💼 Role Availability</button>
+                        <button type="button" class="prompt-chip" data-msg="⚡ What is your primary backend & cloud tech stack?">⚡ Tech Stack Details</button>
+                    </div>
+
+                    <!-- Input Bar -->
+                    <form id="pixel-chat-form" class="chat-input-bar">
+                        <label for="chat-input-field" class="sr-only">Type a message</label>
+                        <input type="text" id="chat-input-field" class="chat-input" placeholder="Type a message or click a prompt above..." autocomplete="off">
+                        <button type="submit" class="chat-send-btn">&#9658; SEND</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECTION: CONTACT
+             ====================================================================== -->
+        <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Connect</p>
+                    <h2 id="contact-heading" class="section-title">Let&rsquo;s build something great.</h2>
+                    <p class="section-subtitle">
+                        Interested in discussing engineering leadership, full-stack opportunities, or innovative products?
+                    </p>
+                </header>
+
+                <div class="contact-container">
+                    <form id="contact-form" class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" name="name" required placeholder="Jane Appleseed">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" required placeholder="appleseed@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="5" required placeholder="Tell me about your project, team, or opportunity..."></textarea>
+                        </div>
+
+                        <button type="submit" class="apple-btn apple-btn-primary contact-submit-btn">
+                            Send Message &rsaquo;
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer id="site-footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; <span id="current-year">2026</span> Utsav. Engineered with precision.</p>
+
+            <ul class="social-links" aria-label="Social and Professional Profiles">
+                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+            </ul>
+
+            <div class="back-to-top">
+                <a href="#hero" aria-label="Back to top">&uarr; Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js 3D WebGL Engine CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Anime.js Engine CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- Interactive Scripts Powered by Three.js & Anime.js -->
+    <script src="script.js"></script>
+</body>
+</html>
